@@ -18,17 +18,35 @@ int main()
 
 char character(char start, int offset) {
 
+	string alphabet = "abcdefghijklmnopqrstuvwxyz";
+	string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char c;
 
 	if (isalpha(start))
 	{
-		start + offset = c;
-		if (isalpha(c))
+
+		if (offset > 27)
 		{
+			cout << "invalidRangeException" << endl;
+		}
+
+		if (start == 'a', 'A' && offset == -1)
+		{
+			cout << "invalidRangeException" << endl;
+		}
+
+		if (isupper(start))
+		{
+			c = Alphabet[offset];
 			cout << c << endl;
 		}
-		else cout << "invalidRangeExpedition" << endl;
-		
+
+		if (islower(start))
+		{
+			c = alphabet[offset];
+			cout << c << endl;
+		}
+
 	}
-	else cout << "invalidCharaterException" << endl;
+	else cout << "invalidCharacterException" << endl;
 }
